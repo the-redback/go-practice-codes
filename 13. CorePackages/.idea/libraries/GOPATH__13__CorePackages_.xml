@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="GOPATH &lt;Containers&gt;">
+  <library name="GOPATH &lt;13. CorePackages&gt;">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/.." />
       <root url="file://$PROJECT_DIR$/../../github.com" />
@@ -9,7 +9,7 @@
       <root url="file://$PROJECT_DIR$/../../github.com" />
     </SOURCES>
     <excluded>
-      <root url="file://$PROJECT_DIR$/../Containers_List_Hash_Sort" />
+      <root url="file://$PROJECT_DIR$" />
     </excluded>
   </library>
 </component>
