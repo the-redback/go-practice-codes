@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.exampleMessage";
+option java_outer_classname = "exampleMessageProto";
+
+package exampleMessage;
+
+service greeter{
+    rpc SayHello(HelloRequest) returns(HelloReply) { }
+}
+
+message HelloRequest {
+    string name = 1;
+    int32 a=2;
+    int32 b=3;
+}
+
+message HelloReply {
+    string message = 1;
+    int32 result=2;
+}
+
