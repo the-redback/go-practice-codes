@@ -1,9 +1,26 @@
-1. cd /home/maruf/go/src/GoglandProjects/gRPC_Sample/exampleServer
-2. go run server.go
+1. command: 
+cd /home/maruf/go/src/GoglandProjects/gRPC_Sample
 
-3. keep this terminal open and open another terminal
-4. cd /home/maruf/go/src/GoglandProjects/gRPC_Sample/exampleClient
-5. go run client.go
-6. give one string and two int input
+2. command:  [this generates go file from proto file]
+protoc -I exampleMessage exampleMessage/exampleMessage.proto --go_out=plugins=grpc:exampleMessage
 
-repeat 3,4,5,6 multiple times
+
+
+3.command:
+cd /home/maruf/go/src/GoglandProjects/gRPC_Sample/exampleServer
+
+4.command
+go run server.go
+
+
+5. keep this terminal open and open another terminal
+6. command:
+
+cd /home/maruf/go/src/GoglandProjects/gRPC_Sample/exampleClient
+
+7.command:
+go run client.go
+
+8. give one string and two int input
+
+repeat 5,6,7,8 multiple times
