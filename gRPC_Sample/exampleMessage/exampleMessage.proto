@@ -1,13 +1,18 @@
 syntax = "proto3";
 
-option java_multiple_files = true;
-option java_package = "io.grpc.examples.exampleMessage";
-option java_outer_classname = "exampleMessageProto";
+import "google/api/annotations.proto";
 
 package exampleMessage;
 
-service greeter{
-    rpc SayHello(HelloRequest) returns(HelloReply) { }
+
+
+service Greeter{
+    rpc SayHello(HelloRequest) returns(HelloReply) {
+        option (google.api.http) = {
+        post: "/echo"
+        body: "*"
+      };
+    }
 }
 
 message HelloRequest {

@@ -9,7 +9,8 @@ import (
 	"golang.org/x/net/context"
 
 	pb "GoglandProjects/gRPC_Sample/exampleMessage"
-	
+
+	"GoglandProjects/gRPC_Sample/proxy"
 )
 
 const (
@@ -21,9 +22,9 @@ type server struct{}
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 
 	c:=in.A+in.B
-	log.Println("Request from "+in.Name+" where numbers are",in.A,in.B)
+	log.Println("Request from :"+in.Name+", where numbers are",in.A,in.B)
 
-	return &pb.HelloReply{ "Result of request: ",c}, nil
+	return &pb.HelloReply{ "Successful request",c}, nil
 }
 
 
@@ -37,6 +38,11 @@ func main() {
 	pb.RegisterGreeterServer(s, &server{})
 	// Register reflection service on gRPC server.
 	reflection.Register(s)
+
+	log.Println("Server running at port 50053")
+
+	go proxy.Call() //gRPC gateway
+
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
