@@ -1,3 +1,5 @@
+> minikube start
+
 # create k8s deployment and service from yaml
 > kubectl create -f grpc-deployment.yaml
 > kubectl create -f grpc-service.yaml
