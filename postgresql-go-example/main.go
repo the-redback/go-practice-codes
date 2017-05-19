@@ -46,7 +46,7 @@ func (post *postgresDB)insert_query() {
 	name, dept)
 	VALUES ($1, $2);`
 	id := 1
-	err = post.db.QueryRow(sqlStatement, "name","dept").Scan(&id)
+	err = post.db.QueryRow(sqlStatement, "name","dept456").Scan(&id)
 	if err != nil {
 		fmt.Println(err)
 	}
