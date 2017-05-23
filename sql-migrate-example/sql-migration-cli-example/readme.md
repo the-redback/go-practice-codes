@@ -45,8 +45,8 @@ this will execute all the sqls of all the files
 
 # Sql execution Down. 
 > sql-migrate down -env=development
-Down executions will execute down parts of one file each time. The last generated file will be executed 1st.
 
+Down executions will execute down parts of one file each time. The last generated file will be executed 1st.
 
 > sql-migrate status -env=development
 
