@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;sql-migrate-go-example&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../google.golang.org" />
+      <root url="file://$PROJECT_DIR$/../.." />
+      <root url="file://$PROJECT_DIR$/../../../github.com" />
+      <root url="file://$PROJECT_DIR$/../../../sql-migration-go" />
+      <root url="file://$PROJECT_DIR$/../../../sql-migration-cli-example" />
+      <root url="file://$PROJECT_DIR$/../../../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../appscode_onboarding" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+      <root url="file://$PROJECT_DIR$/../../../google.golang.org" />
+      <root url="file://$PROJECT_DIR$/../.." />
+      <root url="file://$PROJECT_DIR$/../../../github.com" />
+      <root url="file://$PROJECT_DIR$/../../../sql-migration-go" />
+      <root url="file://$PROJECT_DIR$/../../../sql-migration-cli-example" />
+      <root url="file://$PROJECT_DIR$/../../../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../../appscode_onboarding" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
