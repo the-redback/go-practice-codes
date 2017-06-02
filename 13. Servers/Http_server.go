@@ -24,8 +24,11 @@ func hello(res http.ResponseWriter, req *http.Request) {
 	</html>`,
 	)
 }
+
+
 //Can't see any output of this programm
 //Have no idea why!!! -_-
+
 func main() {
 	http.HandleFunc("/hello",hello)
 	http.ListenAndServe(":9000",nil)
