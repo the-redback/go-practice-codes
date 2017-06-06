@@ -21,7 +21,7 @@ type server struct{}
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 
 	c:=in.A+in.B
-	fmt.Println("Request from "+in.Name+" where numbers are",c)
+	fmt.Println("Request from "+in.Name+" where numbers are",in.A,in.B)
 
 	return &pb.HelloReply{ "Result of request: ",c}, nil
 }
