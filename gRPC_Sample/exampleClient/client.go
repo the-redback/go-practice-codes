@@ -44,6 +44,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
-	fmt.Println(r.Message,r.Result)
+	log.Println(r.Message,r.Result)
 
 }
