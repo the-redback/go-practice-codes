@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PostgreSQL - sample-database@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="sample-database">
+      <ObjectId>16388</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-05-23.12:43:22.471</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1136</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12153</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="book_info_book_id_seq">
+      <ObjectId>32847</ObjectId>
+      <StateNumber>1009</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="library_info_entry_id_seq">
+      <ObjectId>32830</ObjectId>
+      <StateNumber>989</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="11" parent="3" name="user_info_uid_seq">
+      <ObjectId>32819</ObjectId>
+      <StateNumber>946</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="12" parent="3" name="book_info">
+      <ObjectId>32849</ObjectId>
+      <StateNumber>1078</StateNumber>
+    </table>
+    <table id="13" parent="3" name="library_info">
+      <ObjectId>32832</ObjectId>
+      <StateNumber>989</StateNumber>
+    </table>
+    <table id="14" parent="3" name="migrations">
+      <ObjectId>32902</ObjectId>
+      <StateNumber>1136</StateNumber>
+    </table>
+    <table id="15" parent="3" name="user_info">
+      <ObjectId>32821</ObjectId>
+      <StateNumber>946</StateNumber>
+    </table>
+    <column id="16" parent="12" name="book_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1009</StateNumber>
+      <SequenceName>book_info_book_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;book_info_book_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="17" parent="12" name="author_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1009</StateNumber>
+    </column>
+    <column id="18" parent="12" name="version">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1078</StateNumber>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <index id="19" parent="12" name="book_info_pkey">
+      <ObjectId>32853</ObjectId>
+      <ColNames>book_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="20" parent="12" name="book_info_pkey">
+      <ObjectId>32854</ObjectId>
+      <ColNames>book_id</ColNames>
+      <UnderlyingIndexName>book_info_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="13" name="entry_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>989</StateNumber>
+      <SequenceName>library_info_entry_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;library_info_entry_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="22" parent="13" name="book_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>989</StateNumber>
+    </column>
+    <column id="23" parent="13" name="student_id">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>989</StateNumber>
+    </column>
+    <index id="24" parent="13" name="library_info_pkey1">
+      <ObjectId>32836</ObjectId>
+      <ColNames>entry_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="25" parent="13" name="library_info_pkey1">
+      <ObjectId>32837</ObjectId>
+      <ColNames>entry_id</ColNames>
+      <UnderlyingIndexName>library_info_pkey1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1136</StateNumber>
+    </column>
+    <column id="27" parent="14" name="applied_at">
+      <Position>2</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <StateNumber>1136</StateNumber>
+    </column>
+    <index id="28" parent="14" name="migrations_pkey">
+      <ObjectId>32908</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="14" name="migrations_pkey">
+      <ObjectId>32909</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="15" name="uid">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>946</StateNumber>
+      <SequenceName>user_info_uid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;user_info_uid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="31" parent="15" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>946</StateNumber>
+    </column>
+    <column id="32" parent="15" name="dept">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>946</StateNumber>
+    </column>
+    <column id="33" parent="15" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>946</StateNumber>
+    </column>
+    <column id="34" parent="15" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>946</StateNumber>
+    </column>
+    <index id="35" parent="15" name="user_info_pkey">
+      <ObjectId>32828</ObjectId>
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="15" name="user_info_pkey">
+      <ObjectId>32829</ObjectId>
+      <ColNames>uid</ColNames>
+      <UnderlyingIndexName>user_info_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

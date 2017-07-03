@@ -1,0 +1,10 @@
+development:
+    dialect: postgres
+    datasource: host=localhost port=5432 user=maruf password=pass dbname=sql-migrations sslmode=disable
+    dir: migrations/postgres1
+
+production:
+    dialect: postgres
+    datasource: host=localhost port=5432 user=maruf password=pass dbname=sample-database sslmode=disable
+    dir: migrations/postgres
+    table: migrations
