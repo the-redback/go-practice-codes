@@ -6,8 +6,8 @@
 # development section
 > sql-migrate new -env=development
 
-##### a sql file will be generated in migrations/postgres1
-##### add sql to that generated file, example
+### a sql file will be generated in migrations/postgres1
+### add sql to that generated file, example
 
 -- +migrate Up
 
