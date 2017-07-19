@@ -9,7 +9,7 @@
 ### a sql file will be generated in migrations/postgres1
 ### add sql to that generated file, example
 
-'''
+```
 -- +migrate Up
 
 Create table if not exists people(id int);
@@ -17,7 +17,7 @@ Create table if not exists people(id int);
 -- +migrate Down
 
 Drop Table people;
-'''
+```
 
 
 # create another file by
