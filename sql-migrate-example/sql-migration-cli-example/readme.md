@@ -24,6 +24,7 @@ Drop Table people;
 > sql-migrate new -env=development
 
 # add folowing sql to new file, example
+```
 -- +migrate Up
 
 Insert into people values(1);
@@ -35,7 +36,7 @@ Insert into people values(3);
 Delete from people where id=1;
 Delete from people where id=2;
 Delete from people where id=3;
-
+```
 
 
 # See status 
