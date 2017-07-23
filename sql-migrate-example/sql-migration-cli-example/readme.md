@@ -6,8 +6,8 @@
 # development section
 > sql-migrate new -env=development
 
-### a sql file will be generated in migrations/postgres1
-### add sql to that generated file, example
+a sql file will be generated in migrations/postgres1
+add sql to that generated file, example
 
 ```
 -- +migrate Up
@@ -38,12 +38,14 @@ Delete from people where id=3;
 # See status 
 > sql-migrate status -env=development
 
-# execute sql file UP. this will execute all the sqls of all the files
+# execute sql file UP. 
 > sql-migrate up -env=development
 
-# Sql execution Down. Down executions will execute down parts of one file each time. The last generated file will be executed 1st.
-> sql-migrate down -env=development
+this will execute all the sqls of all the files
 
+# Sql execution Down. 
+> sql-migrate down -env=development
+Down executions will execute down parts of one file each time. The last generated file will be executed 1st.
 
 
 > sql-migrate status -env=development
