@@ -1,9 +1,9 @@
-# drivers for sql-migrate
+# *drivers for sql-migrate*
 > go get github.com/rubenv/sql-migrate/...
 
 
 
-# development section
+# *development section*
 > sql-migrate new -env=development
 
 a sql file will be generated in migrations/postgres1
