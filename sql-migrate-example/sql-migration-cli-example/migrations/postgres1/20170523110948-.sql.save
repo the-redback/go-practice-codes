@@ -1,9 +1,0 @@
-
--- +migrate Up
-Create table people(id int);
-
-
-
-
--- +migrate Down
-Drop Table peopl
