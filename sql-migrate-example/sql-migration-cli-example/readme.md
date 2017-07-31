@@ -1,9 +1,9 @@
-# drivers for sql-migrate
+### drivers for sql-migrate
 > go get github.com/rubenv/sql-migrate/...
 
 
 
-# development section
+### development section
 > sql-migrate new -env=development
 
 a sql file will be generated in migrations/postgres1
@@ -18,10 +18,10 @@ Drop Table people;
 ```
 
 
-# create another file by
+### create another file by
 > sql-migrate new -env=development
 
-# add folowing sql to new file, example
+### add folowing sql to new file, example
 ```
 -- +migrate Up
 Insert into people values(1);
@@ -35,15 +35,15 @@ Delete from people where id=3;
 ```
 
 
-# See status 
+### See status 
 > sql-migrate status -env=development
 
-# execute sql file UP. 
+### execute sql file UP. 
 > sql-migrate up -env=development
 
 this will execute all the sqls of all the files
 
-# Sql execution Down. 
+### Sql execution Down. 
 > sql-migrate down -env=development
 
 Down executions will execute down parts of one file each time. The last generated file will be executed 1st.
@@ -51,4 +51,4 @@ Down executions will execute down parts of one file each time. The last generate
 > sql-migrate status -env=development
 
 
-# Similar with -env=production
+### Similar with -env=production
